@@ -11,11 +11,6 @@ export const NavBar = () => {
                         <span className={'navBar-item-left'}>Videos</span>
                         <span className={'navBar-item-right'}>Favorite videos <img className={'heart-icon'} src={heart} alt="heart"/></span>
                     </div>
-                    <div className={'input-wrapper'}>
-                        <button className={'input-search-btn'}><img src={search} alt="search"/></button>
-                        <input className={'search-input'} placeholder={'Search'}/>
-                    </div>
-
                     <div className={'login-out-wrapper'}>
                         <button className={'login-out-button'}>Logout</button>
                     </div>
