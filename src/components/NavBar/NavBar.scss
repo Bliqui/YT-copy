@@ -1,0 +1,85 @@
+@import "./src/assests/styles/index";
+@mixin button () {
+  background-color: #363636;
+  border: 1px solid #363636;
+  color: $navWhite;
+  cursor: pointer;
+  font-family: $fontFamily;
+  font-size: 16px;
+
+  &:active {
+    background-color: #595959
+  }
+};
+
+.navBar-body {
+  width: 100%;
+  height: 50px;
+  background-color: $navBlack;
+  color: $navWhite;
+  font-family: $fontFamily;
+  @include flex(center, row, center);
+
+  & .navBar-wrapper {
+    width: 90%;
+    height: 100%;
+
+    & .navBar-row {
+      @include flex(space-between, row, center);
+      height: 100%;
+
+      & .navBar-items {
+        text-align: center;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        user-select: none;
+
+        & .navBar-item-left {
+          margin-right: 10px;
+          &:active {
+            border-bottom: 2px solid $navWhite;
+          }
+        }
+
+        & .navBar-item-right {
+          & .heart-icon {
+            height: 15px;
+            width: 15px;
+          }
+          &:active {
+            border-bottom: 2px solid $navWhite;
+          }
+        }
+      }
+
+      & .input-wrapper {
+        height: 100%;
+        @include flex(center, row, center);
+
+        & .input-search-btn {
+          height: 100%;
+          @include button;
+        }
+
+        & .search-input {
+          width: 450px;
+          height: 80%;
+          background-color: #121212;
+          font-size: 16px;
+          border-radius: 3px;
+          color: rgba(255, 255, 255, 0.88)
+        }
+      }
+
+      & .login-out-wrapper {
+        height: 100%;
+        @include flex(center, row, center);
+        & .login-out-button {
+          height: 100%;
+          width: 70px;
+          @include button;
+        }
+      }
+    }
+  }
+}
