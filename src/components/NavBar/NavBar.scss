@@ -1,16 +1,4 @@
 @import "./src/assests/styles/index";
-@mixin button () {
-  background-color: #363636;
-  border: 1px solid #363636;
-  color: $navWhite;
-  cursor: pointer;
-  font-family: $fontFamily;
-  font-size: 16px;
-
-  &:active {
-    background-color: #595959
-  }
-};
 
 .navBar-body {
   width: 100%;
@@ -49,25 +37,6 @@
           &:active {
             border-bottom: 2px solid $navWhite;
           }
-        }
-      }
-
-      & .input-wrapper {
-        height: 100%;
-        @include flex(center, row, center);
-
-        & .input-search-btn {
-          height: 100%;
-          @include button;
-        }
-
-        & .search-input {
-          width: 450px;
-          height: 80%;
-          background-color: #121212;
-          font-size: 16px;
-          border-radius: 3px;
-          color: rgba(255, 255, 255, 0.88)
         }
       }
 
