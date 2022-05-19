@@ -17,14 +17,17 @@ a {
   }
 }
 
-html {
+body {
   height: 100vh;
   width: 100%;
   margin: 0;
 }
 
-body {
+#root {
   height: 100%;
   width: 100%;
-  margin: 0;
+}
+
+.youtube {
+  height: 100%;
 }
