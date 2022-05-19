@@ -1,1 +1,36 @@
-rsc
+@import "./src/assests/styles/index";
+
+.videos-body {
+  height: 100%;
+  width: 100%;
+  @include flex(center, row, center);
+  & .videos-wrapper {
+    @include flex(center, row, center);
+    height: 100%;
+    width: 1200px;
+    max-width: 1200px;
+    & .input-wrapper {
+      height: 95px;
+      @include flex(center, column, center);
+      & .input-search-btn {
+        height: 100%;
+        width: 130px;
+        box-sizing: border-box;
+        @include button;
+      }
+
+      & .search-input {
+        width: 450px;
+        height: 100%;
+        background-color: transparent;
+        font-size: 16px;
+        border-radius: 15px;
+        box-sizing: border-box;
+      }
+
+      & .search-input::placeholder {
+        color: #363636;
+      }
+    }
+  }
+}
