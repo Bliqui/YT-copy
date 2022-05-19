@@ -1,2 +1,3 @@
 # YouTube search panel copy
-I've started making copy of YT search pannel, here, with YT's API i'll create a little aplication wich will allow you to find any public video from YouTube.
+I've started making copy of YT search panel, here, with YT's API I'll create a little application which will allow you to find any public video from YouTube.
+grammar 
