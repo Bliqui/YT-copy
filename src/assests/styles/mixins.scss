@@ -4,3 +4,16 @@
   flex-direction: $direction;
   align-items: $alignI;
 }
+
+@mixin button () {
+  background-color: #363636;
+  border: 1px solid #363636;
+  color: $navWhite;
+  cursor: pointer;
+  font-family: $fontFamily;
+  font-size: 16px;
+
+  &:active {
+    background-color: #595959
+  }
+};
