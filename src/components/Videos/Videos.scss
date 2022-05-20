@@ -1,11 +1,11 @@
 @import "./src/assests/styles/index";
 
-.videos-body {
+.videos-search-body {
   height: 100%;
   width: 100%;
   @include flex(center, row, center);
   & .videos-wrapper {
-    @include flex(center, row, center);
+    @include flex(center, column, center);
     height: 100%;
     width: 1200px;
     max-width: 1200px;
