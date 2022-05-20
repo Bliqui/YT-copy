@@ -3,7 +3,7 @@
 .videos-search-body {
   height: 100%;
   width: 100%;
-  @include flex(center, row, center);
+  @include flex(center, column, center);
   & .videos-wrapper {
     @include flex(center, column, center);
     height: 100%;
@@ -32,5 +32,8 @@
         color: #363636;
       }
     }
+  }
+  & .videosList {
+    max-width: 1200px;
   }
 }
