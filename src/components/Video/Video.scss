@@ -1,0 +1,22 @@
+@import "./src/assests/styles/index";
+
+.videoBody {
+  max-width: 320px;
+  & .videoWrapper {
+    width: 100%;
+    & .video {
+      @include flex(space-between, column, flex-start);
+      width: 100%;
+      & .videoInfo {
+        & .videoTitle {
+
+        }
+        & .videoChannelName {
+
+        }
+      }
+    }
+  }
+}
+
+

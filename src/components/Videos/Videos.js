@@ -45,8 +45,8 @@ export const Videos = () => {
                            placeholder={'Search'}/>
                     <button className={'input-search-btn'}>Search</button>
                 </form>
-                {loader ? <Loader/> : <VideosList listedVideos={listedVideos}/>}
             </div>
+            {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={listedVideos}/>}
         </div>
     );
 };
