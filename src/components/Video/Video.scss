@@ -2,17 +2,19 @@
 
 .videoBody {
   max-width: 320px;
+  width: 320px;
   & .videoWrapper {
     width: 100%;
     & .video {
       @include flex(space-between, column, flex-start);
       width: 100%;
+      margin-top: 20px;
       & .videoInfo {
         & .videoTitle {
-
+          @include titleFont;
         }
         & .videoChannelName {
-
+          @include channelNameFont
         }
       }
     }
