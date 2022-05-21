@@ -8,7 +8,7 @@ import {VideosList} from "../VideosList/VideosList";
 
 export const Videos = () => {
     const [listedVideos, setListedVideos] = useState([]);
-    const [searchValue, setSearchValue] = useState([]);
+    const [searchValue, setSearchValue] = useState('');
     const [loader, setLoader] = useState(false);
     const navigate = useNavigate();
 
@@ -30,7 +30,10 @@ export const Videos = () => {
                 alert('Oops... something could have gone wrong.');
                 navigate('/');
             })
-            .finally(() => setLoader(false));
+            .finally(() => {
+                setLoader(false)
+                setSearchValue('');
+            });
     };
 
     function handeInputChange(e) {
