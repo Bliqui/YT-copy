@@ -7,8 +7,14 @@
     @include flex(center, column, center);
     max-width: 1200px;
     margin-top: 20px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
     & .input-wrapper {
       height: 95px;
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
       @include flex(center, column, center);
       & .input-search-btn {
         height: 100%;
@@ -24,6 +30,10 @@
         font-size: 16px;
         border-radius: 15px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 480px) {
+          width: 90%;
+        }
       }
 
       & .search-input::placeholder {

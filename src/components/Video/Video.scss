@@ -3,9 +3,18 @@
 .videoBody {
   max-width: 320px;
   width: 320px;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
   & .videoWrapper {
     width: 100%;
     & .video {
+      @media screen and (max-width: 480px) {
+        & .videoThumbnail {
+          width: 100%;
+        }
+      }
+
       @include flex(space-between, column, flex-start);
       width: 100%;
       margin-top: 20px;

@@ -10,6 +10,9 @@
   & .videosWrapper {
     width: 100%;
     max-width: 1200px;
+    @media screen and (max-width: 480px){
+      justify-content: center;
+    }
     @include flex(space-between, row, center);
     flex-wrap: wrap;
   }
