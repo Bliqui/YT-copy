@@ -11,22 +11,19 @@
   & .navBar-wrapper {
     width: 90%;
     height: 100%;
+    max-width: 1200px;
 
     & .navBar-row {
       @include flex(space-between, row, center);
       height: 100%;
 
-      & .navBar-items {
+      & .navBar-logoWrapper {
         text-align: center;
-        border-bottom: 2px solid transparent;
         cursor: pointer;
         user-select: none;
-
-        & .navBar-item-left {
-          margin-right: 10px;
-          &:active {
-            border-bottom: 2px solid $navWhite;
-          }
+        height: 100%;
+        & .navBar-logo {
+          height: 100%;
         }
 
         & .navBar-item-right {

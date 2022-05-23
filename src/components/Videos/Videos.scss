@@ -7,32 +7,39 @@
     @include flex(center, column, center);
     max-width: 1200px;
     margin-top: 20px;
+
     @media screen and (max-width: 480px) {
       width: 100%;
     }
     & .input-wrapper {
-      height: 95px;
+      height: 45px;
+      width: 450px;
+
       @media screen and (max-width: 480px) {
-        width: 100%;
+        width: 90%;
       }
-      @include flex(center, column, center);
       & .input-search-btn {
         height: 100%;
-        width: 130px;
+        width: 20%;
         box-sizing: border-box;
         @include button;
+        border-left: none;
+
+        @media screen and (max-width: 480px) {
+          width: 30%;
+        }
       }
 
       & .search-input {
-        width: 450px;
+        width: 80%;
         height: 100%;
         background-color: transparent;
         font-size: 16px;
-        border-radius: 15px;
+        border-right: none;
         box-sizing: border-box;
 
         @media screen and (max-width: 480px) {
-          width: 90%;
+          width: 70%;
         }
       }
 

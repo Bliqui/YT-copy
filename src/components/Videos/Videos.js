@@ -25,6 +25,7 @@ export const Videos = () => {
             .then((response) => {
                 setListedVideos([]);
                 setListedVideos(prevState => [...prevState, response.data])
+                console.log(listedVideos)
             })
             .catch(() => {
                 alert('Oops... something could have gone wrong.');
