@@ -1,6 +1,5 @@
 import './NavBar.scss'
 import heart from '../../assests/images/white-heart.png'
-import search from '../../assests/images/search.png'
 
 export const NavBar = () => {
     return (
