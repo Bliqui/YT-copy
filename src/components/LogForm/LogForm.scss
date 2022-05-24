@@ -1,1 +1,50 @@
-rsc
+@import './src/assests/styles/index';
+
+.formBody {
+  width: 100%;
+  @include flex(center, column, center);
+  & .formWrapper {
+    @include flex(center, column, center);
+    @media screen and (max-width: 480px)  {
+      width: 100%;
+    }
+    & .inputWrapper {
+      width: 300px;
+      @media screen and (max-width: 480px) {
+        width: 95%;
+      }
+      & .emailInput {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        &::placeholder {
+          color: $navBlack;
+          font-weight: 600;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 95%;
+        }
+      }
+      & .passwordInput {
+        width: 100%;
+        height: 40px;
+        &::placeholder {
+          color: $navBlack;
+          font-weight: 600;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 95%;
+        }
+      }
+    }
+    & .submitBtn {
+      margin-top: 10px;
+      @include regLogBtn($navBlack);
+      cursor: pointer;
+    }
+  }
+}
+
+
