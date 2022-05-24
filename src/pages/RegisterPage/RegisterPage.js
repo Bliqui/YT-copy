@@ -1,13 +1,14 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {SignUp} from "../components/SignUp/SignUp";
+import {SignUp} from "../../components/SignUp/SignUp";
+import './RegisterPage.scss'
 
 export const RegisterPage = () => {
     return (
-        <div>
-            <span>Register</span>
+        <div className={'regBody'}>
+            <span className={'regTitle'}>Register</span>
             <SignUp/>
-            <p>Already have an account? <NavLink to={'/login'}>log in</NavLink></p>
+            <p className={'loginReDir'}>Already have an account? <NavLink to={'/login'}>log in</NavLink></p>
         </div>
     );
 };

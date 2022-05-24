@@ -1,0 +1,22 @@
+@import './src/assests/styles/index';
+
+.loginBody {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  font-family: $fontFamily;
+  margin: 0 auto;
+  @include flex(center, column, center);
+  & .loginTitle {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  & .loginReDir {
+    color: $navBlack;
+    & a {
+      color: $navBlack;
+      text-decoration: underline;
+    }
+  }
+}
