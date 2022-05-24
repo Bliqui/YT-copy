@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {ytReq} from "../../APIs/ytRequest";
-import search from "../../assests/images/search.png";
 import './Videos.scss';
 import {Loader} from "../Loader/Loader";
 import {useNavigate} from "react-router-dom";
 import {VideosList} from "../VideosList/VideosList";
+import {useAuth} from "../../hooks/useAuth";
 
 export const Videos = () => {
     const [listedVideos, setListedVideos] = useState([]);
@@ -40,7 +40,9 @@ export const Videos = () => {
         setSearchValue(e.target.value)
     };
 
-    return (
+    const {isAuth} = useAuth();
+
+    return isAuth ? (
         <div className={'videos-search-body'}>
             <div className={'videos-wrapper'}>
                 <form className={'input-wrapper'} onSubmit={(e) => handleSubmit(e)}>
@@ -51,5 +53,7 @@ export const Videos = () => {
             </div>
             {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={listedVideos}/>}
         </div>
+    ) : (
+        navigate('/login')
     );
 };
