@@ -10,7 +10,8 @@ export const LogIn = () => {
     const navigate = useNavigate();
 
     const auth = getAuth(app);
-    const handleLogin = (email, password) => {
+    const handleLogin = (e, email, password) => {
+        e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
                 dispatch({
@@ -30,7 +31,7 @@ export const LogIn = () => {
         <LogForm
             className={'form'}
             title={'Sign in'}
-            handleClick={handleLogin}
+            handleSubmit={handleLogin}
         />
     );
 };

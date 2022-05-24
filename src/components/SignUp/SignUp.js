@@ -10,7 +10,8 @@ export const SignUp = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const auth = getAuth(app);
-    const handleRegister = (email, password) => {
+    const handleRegister = (e, email, password) => {
+        e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
                 dispatch({
@@ -29,7 +30,7 @@ export const SignUp = () => {
         <LogForm
             className={'form'}
             title={'Sign up'}
-            handleClick={handleRegister}
+            handleSubmit={handleRegister}
         />
     );
 };

@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import './LogForm.scss'
 
-export const LogForm = ({title, handleClick}) => {
+export const LogForm = ({title, handleSubmit}) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
     return (
-        <div className={'formBody'}>
+        <form className={'formBody'} onSubmit={(e) => handleSubmit(e, email, pass)}>
             <div className={'formWrapper'}>
                 <div className={'inputWrapper'}>
                     <input
@@ -26,10 +26,10 @@ export const LogForm = ({title, handleClick}) => {
                         value={pass}
                     />
                 </div>
-                <button className={'submitBtn'} onClick={() => handleClick(email, pass)}>
+                <button className={'submitBtn'}>
                     {title}
                 </button>
             </div>
-        </div>
+        </form>
     );
 };
