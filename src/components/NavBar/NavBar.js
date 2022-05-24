@@ -1,7 +1,20 @@
-import './NavBar.scss'
-import logo from '../../assests/images/yt-logo.png'
+import './NavBar.scss';
+import logo from '../../assests/images/yt-logo.png';
+import {useAuth} from "../../hooks/useAuth";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 export const NavBar = () => {
+
+    const {isAuth} = useAuth();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const logOut = () => {
+        dispatch({type: 'REMOVE_USER'});
+        navigate('/login');
+    }
+
     return (
         <nav className={'navBar-body'}>
             <div className={'navBar-wrapper'}>
@@ -10,7 +23,7 @@ export const NavBar = () => {
                         <img className={'navBar-logo'} src={logo} alt="logo"/>
                     </div>
                     <div className={'login-out-wrapper'}>
-                        <button className={'login-out-button'}>Logout</button>
+                        {isAuth ? <button onClick={logOut} className={'login-out-button'}>Logout</button> : null}
                     </div>
                 </div>
             </div>
