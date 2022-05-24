@@ -1,14 +1,36 @@
 import React from 'react';
 import {LogForm} from "../LogForm/LogForm";
+import {useDispatch} from "react-redux";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {app} from "../../firebase";
+import {useNavigate} from "react-router-dom";
 
 export const LogIn = () => {
-    const handleLogin = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
+    const auth = getAuth(app);
+    const handleLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(({user}) => {
+                dispatch({
+                    type: 'SET_USER',
+                    payload: {
+                        email: user.email,
+                        id: user.uid,
+                        token: user.accessToken,
+                    }
+                });
+                navigate('/');
+            })
+            .catch(console.error)
     }
 
     return (
-        <div>
-
-        </div>
+        <LogForm
+            className={'form'}
+            title={'Sign in'}
+            handleClick={handleLogin}
+        />
     );
 };
