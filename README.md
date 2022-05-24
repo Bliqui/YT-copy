@@ -1,6 +1,10 @@
 # YouTube search panel copy
 I've started making copy of YT search panel, here, with YT's API I'll create a little application which will allow you to find any public video from YouTube.
 
+# Desktop. Login/Register pages:
+![image](https://user-images.githubusercontent.com/59931735/170125178-9b000b02-34b8-4e71-ab39-a3218ce6c493.png)
+![image](https://user-images.githubusercontent.com/59931735/170125234-55fb925e-2c7d-4f03-9f45-a6ad20cb28c6.png)
+
 # Desktop. Main page:
 ![image](https://user-images.githubusercontent.com/59931735/169865721-aadc93a1-8c41-4e07-a870-98597d5df485.png)
 
@@ -9,6 +13,10 @@ I've started making copy of YT search panel, here, with YT's API I'll create a l
 
 # Desktop. Video:
 ![image](https://user-images.githubusercontent.com/59931735/169866017-7129faff-82ac-4248-86be-eb8d1d71238f.png)
+
+# Phone. Login/Register pages:
+![image](https://user-images.githubusercontent.com/59931735/170125499-b1bbecdc-5e7a-4957-ac49-23ea4e6eaef9.png)
+![image](https://user-images.githubusercontent.com/59931735/170125440-72680e95-d2d1-4a70-be70-79c2bba41bbb.png)
 
 # Phone. Website view:
 ![image](https://user-images.githubusercontent.com/59931735/169866099-150584f2-3b24-4bc0-bc80-c22d628e7303.png)
