@@ -1,5 +1,5 @@
 import React from 'react';
-import {LoginOutForm} from "../LoginOutForm/LoginOutForm";
+import {LogForm} from "../LogForm/LogForm";
 
 export const LogIn = () => {
     const handleLogin = () => {
