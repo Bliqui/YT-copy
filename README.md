@@ -2,27 +2,27 @@
 I've started making copy of YT search panel, here, with YT's API I'll create a little application which will allow you to find any public video from YouTube.
 
 # Desktop. Login/Register pages:
-![image](https://user-images.githubusercontent.com/59931735/170125178-9b000b02-34b8-4e71-ab39-a3218ce6c493.png)
-![image](https://user-images.githubusercontent.com/59931735/170125234-55fb925e-2c7d-4f03-9f45-a6ad20cb28c6.png)
+![image](https://user-images.githubusercontent.com/59931735/170273026-3fa03c54-e929-4a4c-9c32-7e3065739395.png)
+![image](https://user-images.githubusercontent.com/59931735/170273067-f9ae3223-740c-409e-ba0c-1e7b446f6cd7.png)
 
 # Desktop. Main page:
-![image](https://user-images.githubusercontent.com/59931735/169865721-aadc93a1-8c41-4e07-a870-98597d5df485.png)
+![image](https://user-images.githubusercontent.com/59931735/170273363-4cf026dc-0bff-4f95-86d9-6e6b3c821c95.png)
 
 # Desktop. Search results:
-![image](https://user-images.githubusercontent.com/59931735/169865831-828163c2-978e-4dbe-9dc1-9353e8b3acb4.png)
+![image](https://user-images.githubusercontent.com/59931735/170273442-e7f8fbac-3fc4-4ae9-b15d-68a8e67e9935.png)
 
 # Desktop. Video:
 ![image](https://user-images.githubusercontent.com/59931735/169866017-7129faff-82ac-4248-86be-eb8d1d71238f.png)
 
 # Phone. Login/Register pages:
-![image](https://user-images.githubusercontent.com/59931735/170125499-b1bbecdc-5e7a-4957-ac49-23ea4e6eaef9.png)
-![image](https://user-images.githubusercontent.com/59931735/170125440-72680e95-d2d1-4a70-be70-79c2bba41bbb.png)
+![image](https://user-images.githubusercontent.com/59931735/170273605-e31c0552-e600-4b96-b111-270ffb745187.png)
+![image](https://user-images.githubusercontent.com/59931735/170273664-cee60d82-74e9-46f7-9ff1-e6abcc76a525.png)
 
 # Phone. Website view:
-![image](https://user-images.githubusercontent.com/59931735/169866099-150584f2-3b24-4bc0-bc80-c22d628e7303.png)
-![image](https://user-images.githubusercontent.com/59931735/169866134-6ca5a17f-b763-4778-b600-9a0a93f4601d.png)
+![image](https://user-images.githubusercontent.com/59931735/170273910-78f0ec50-c981-4d3c-979f-ca3d8b303a45.png)
+![image](https://user-images.githubusercontent.com/59931735/170273952-e21fe0b5-dc78-4840-a394-d5a56004341a.png)
 
 # Tablet. Website view:
-![image](https://user-images.githubusercontent.com/59931735/169866232-8fc296bd-851f-42a6-bb65-9bdc2ab88916.png)
-![image](https://user-images.githubusercontent.com/59931735/169866310-b85a1420-8c9b-488a-ac5e-cb9e80aadf97.png)
+![image](https://user-images.githubusercontent.com/59931735/170274037-8c2a5976-551a-4df5-ab2d-476d44c5a7a1.png)
+![image](https://user-images.githubusercontent.com/59931735/170274084-7986ffcd-b536-4b2b-81e8-4278c5f85c77.png)
 
