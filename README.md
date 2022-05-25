@@ -12,7 +12,7 @@ I've started making copy of YT search panel, here, with YT's API I'll create a l
 ![image](https://user-images.githubusercontent.com/59931735/170273442-e7f8fbac-3fc4-4ae9-b15d-68a8e67e9935.png)
 
 # Desktop. Video:
-![image](https://user-images.githubusercontent.com/59931735/169866017-7129faff-82ac-4248-86be-eb8d1d71238f.png)
+![image](https://user-images.githubusercontent.com/59931735/170274291-98949b83-3037-4a82-8ff3-9b1742148cc4.png)
 
 # Phone. Login/Register pages:
 ![image](https://user-images.githubusercontent.com/59931735/170273605-e31c0552-e600-4b96-b111-270ffb745187.png)
