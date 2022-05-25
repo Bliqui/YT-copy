@@ -13,24 +13,24 @@
       @media screen and (max-width: 480px) {
         width: 95%;
       }
-      & .emailInput {
+      & .inputTitle {
+
+      }
+      & .input {
         width: 100%;
-        height: 40px;
         margin-bottom: 10px;
-        &::placeholder {
-          color: $navBlack;
-          font-weight: 600;
+        margin-top: 5px;
+        border: none;
+        border-bottom: 1px solid $navDark;
+        outline: 2px solid transparent;
+        font-size: 18px;
+
+        &:focus {
+          box-shadow: 0px 1px $navDark;
         }
 
-        @media screen and (max-width: 480px) {
-          width: 95%;
-        }
-      }
-      & .passwordInput {
-        width: 100%;
-        height: 40px;
         &::placeholder {
-          color: $navBlack;
+          color: $navDark;
           font-weight: 600;
         }
 
@@ -41,7 +41,7 @@
     }
     & .submitBtn {
       margin-top: 10px;
-      @include regLogBtn($navBlack);
+      @include regLogBtn($navDark);
       cursor: pointer;
     }
   }

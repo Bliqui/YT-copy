@@ -14,29 +14,27 @@
     & .input-wrapper {
       height: 45px;
       width: 450px;
-
+      @include flex(center, row, flex-end);
       @media screen and (max-width: 480px) {
         width: 90%;
       }
       & .input-search-btn {
-        height: 100%;
-        width: 20%;
-        box-sizing: border-box;
-        @include button;
-        border-left: none;
-
-        @media screen and (max-width: 480px) {
-          width: 30%;
-        }
+        height: 36px;
+        width: 36px;
       }
 
       & .search-input {
         width: 80%;
-        height: 100%;
+        padding-top: 25px;
         background-color: transparent;
-        font-size: 16px;
-        border-right: none;
         box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid $navDark;
+        font-size: 20px;
+
+        &:focus {
+          outline: none;
+        }
 
         @media screen and (max-width: 480px) {
           width: 70%;

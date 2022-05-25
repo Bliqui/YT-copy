@@ -6,12 +6,12 @@
 }
 
 @mixin button () {
-  background-color: #363636;
-  border: 1px solid #363636;
+  background-color: $navDark;
+  border: 1px solid $navDark;
   color: $navWhite;
   cursor: pointer;
   font-family: $fontFamily;
-  font-size: 16px;
+  font-size: 18px;
 
   &:active {
     background-color: #595959
@@ -38,7 +38,7 @@
   padding-top: 8px;
 }
 
-@mixin regLogBtn($navBlack) {
+@mixin regLogBtn($navDark) {
     display: inline-block;
     padding: .75rem 1.25rem;
     color: #fff;
@@ -56,7 +56,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $navBlack;
+      background-color: $navDark;
       z-index: -2;
     }
     &:before {
@@ -66,7 +66,7 @@
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: darken($navBlack, 15%);
+      background-color: #8d8d8d;
       transition: all .3s;
       z-index: -1;
     }

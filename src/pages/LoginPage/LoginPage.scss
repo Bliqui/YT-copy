@@ -10,12 +10,12 @@
   & .loginTitle {
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   & .loginReDir {
-    color: $navBlack;
+    color: $navDark;
     & a {
-      color: $navBlack;
+      color: $navDark;
       text-decoration: underline;
     }
   }

@@ -8,7 +8,7 @@ export const RegisterPage = () => {
         <div className={'regBody'}>
             <span className={'regTitle'}>Register</span>
             <SignUp/>
-            <p className={'loginReDir'}>Already have an account? <NavLink to={'/login'}>log in</NavLink></p>
+            <p className={'loginReDir'}><NavLink to={'/login'}>Already have an account? Log in.</NavLink></p>
         </div>
     );
 };

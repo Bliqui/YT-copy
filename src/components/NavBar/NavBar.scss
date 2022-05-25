@@ -3,7 +3,7 @@
 .navBar-body {
   width: 100%;
   height: 50px;
-  background-color: $navBlack;
+  background-color: $navDark;
   color: $navWhite;
   font-family: $fontFamily;
   @include flex(center, row, center);
@@ -21,7 +21,7 @@
         text-align: center;
         cursor: pointer;
         user-select: none;
-        height: 100%;
+        height: 70%;
         & .navBar-logo {
           height: 100%;
         }

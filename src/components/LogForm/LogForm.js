@@ -9,19 +9,19 @@ export const LogForm = ({title, handleSubmit}) => {
         <form className={'formBody'} onSubmit={(e) => handleSubmit(e, email, pass)}>
             <div className={'formWrapper'}>
                 <div className={'inputWrapper'}>
+                    <div className={'inputTitle'}>Email</div>
                     <input
-                        className={'emailInput'}
+                        className={'input'}
                         type="email"
-                        placeholder="Email"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                     />
                 </div>
                 <div className={'inputWrapper'}>
+                    <div className={'inputTitle'}>Password</div>
                     <input
-                        className={'passwordInput'}
+                        className={'input'}
                         type="password"
-                        placeholder="Password"
                         onChange={(e) => setPass(e.target.value)}
                         value={pass}
                     />

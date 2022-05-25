@@ -15,12 +15,16 @@ export const NavBar = () => {
         navigate('/login');
     }
 
+    const goToHomePage = () => {
+        navigate('/');
+    }
+
     return (
         <nav className={'navBar-body'}>
             <div className={'navBar-wrapper'}>
                 <div className={'navBar-row'}>
                     <div className={'navBar-logoWrapper'}>
-                        <img className={'navBar-logo'} src={logo} alt="logo"/>
+                        <img onClick={goToHomePage} className={'navBar-logo'} src={logo} alt="logo"/>
                     </div>
                     <div className={'login-out-wrapper'}>
                         {isAuth ? <button onClick={logOut} className={'login-out-button'}>Logout</button> : null}
