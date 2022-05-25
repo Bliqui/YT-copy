@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ytReq} from "../../APIs/ytRequest";
 import './Videos.scss';
+import search from '../../assests/images/search.png'
 import {Loader} from "../Loader/Loader";
 import {useNavigate} from "react-router-dom";
 import {VideosList} from "../VideosList/VideosList";
@@ -32,7 +33,6 @@ export const Videos = () => {
             })
             .finally(() => {
                 setLoader(false)
-                setSearchValue('');
             });
     };
 
@@ -42,18 +42,22 @@ export const Videos = () => {
 
     const {isAuth} = useAuth();
 
-    return isAuth ? (
+    useEffect(() => {
+        if (isAuth === false) {
+            navigate('/login')
+        }
+    }, [isAuth])
+
+    return (
         <div className={'videos-search-body'}>
             <div className={'videos-wrapper'}>
                 <form className={'input-wrapper'} onSubmit={(e) => handleSubmit(e)}>
                     <input className={'search-input'} value={searchValue} onChange={(e) => handeInputChange(e)}
                            placeholder={'Search'}/>
-                    <button className={'input-search-btn'}>Search</button>
+                    <button className={'input-search-btn'}><img src={search} alt="search"/></button>
                 </form>
             </div>
             {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={listedVideos}/>}
         </div>
-    ) : (
-        navigate('/login')
-    );
+    )
 };
