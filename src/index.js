@@ -9,7 +9,8 @@ import {RegisterPage} from "./pages/RegisterPage/RegisterPage";
 import {LoginPage} from "./pages/LoginPage/LoginPage";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
-import "./firebase"
+import "./firebase";
+import {FavoritesPage} from "./pages/FavoritesPage/FavoritesPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
                     <Route index element={<Videos/>}/>
                     <Route path={'/login'} element={<LoginPage/>}/>
                     <Route path={'/register'} element={<RegisterPage/>}/>
+                    <Route path={'/favorites'} element={<FavoritesPage/>}/>
                 </Route>
             </Routes>
         </Provider>
