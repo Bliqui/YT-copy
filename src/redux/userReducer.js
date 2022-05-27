@@ -8,6 +8,7 @@ export const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_USER':
             return {
+                ...state,
                 email: action.payload.email,
                 token: action.payload.token,
                 id: action.payload.id,
@@ -15,6 +16,7 @@ export const userReducer = (state = initialState, action) => {
 
         case 'REMOVE_USER':
             return {
+                ...state,
                 email: null,
                 token: null,
                 id: null,
