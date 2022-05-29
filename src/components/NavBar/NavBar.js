@@ -2,7 +2,7 @@ import './NavBar.scss';
 import logo from '../../assests/images/yt-logo.png';
 import {useAuth} from "../../hooks/useAuth";
 import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -27,6 +27,7 @@ export const NavBar = () => {
                         <img onClick={goToHomePage} className={'navBar-logo'} src={logo} alt="logo"/>
                     </div>
                     <div className={'login-out-wrapper'}>
+                        {isAuth ? <button className={'favorites-link'}><NavLink to={'/favorites'}>Favorites</NavLink></button> : null}
                         {isAuth ? <button onClick={logOut} className={'login-out-button'}>Logout</button> : null}
                     </div>
                 </div>

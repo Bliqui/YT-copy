@@ -36,10 +36,17 @@
           }
         }
       }
-
       & .login-out-wrapper {
         height: 100%;
         @include flex(center, row, center);
+        & .favorites-link {
+          height: 100%;
+          margin-right: 10px;
+          @include button;
+          & a {
+            color: $navWhite
+          }
+        }
         & .login-out-button {
           height: 100%;
           width: 70px;
