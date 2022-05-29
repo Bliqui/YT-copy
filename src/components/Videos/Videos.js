@@ -13,9 +13,8 @@ export const Videos = () => {
     const [loader, setLoader] = useState(false);
     const navigate = useNavigate();
 
-    function handleSubmit(e) {
+    function fetchVideos(e) {
         e.preventDefault()
-
         setLoader(true)
 
         ytReq.get('/search', {
@@ -31,14 +30,35 @@ export const Videos = () => {
                 alert('Oops... something could have gone wrong.');
                 navigate('/');
             })
-            .finally(() => {
-                setLoader(false)
-            });
+            .finally(() => setLoader(false));
     };
 
     function handeInputChange(e) {
         setSearchValue(e.target.value)
     };
+
+    function fetchNextVideos(e) {
+        setLoader(true)
+        e.preventDefault()
+
+        ytReq.get('/search', {
+            params: {
+                q: searchValue,
+                pageToken: listedVideos[0].nextPageToken
+            }
+        })
+            .then((response) => {
+                setListedVideos([]);
+                setListedVideos(prevState => [...prevState, response.data])
+            })
+            .catch(() => {
+                alert('Oops... something could have gone wrong.');
+                navigate('/');
+            })
+            .finally(() => {
+                setLoader(false)
+            });
+    }
 
     const {isAuth} = useAuth();
 
@@ -51,13 +71,14 @@ export const Videos = () => {
     return (
         <div className={'videos-search-body'}>
             <div className={'videos-wrapper'}>
-                <form className={'input-wrapper'} onSubmit={(e) => handleSubmit(e)}>
+                <form className={'input-wrapper'} onSubmit={(e) => fetchVideos(e)}>
                     <input className={'search-input'} value={searchValue} onChange={(e) => handeInputChange(e)}
                            placeholder={'Search'}/>
                     <button className={'input-search-btn'}><img src={search} alt="search"/></button>
                 </form>
             </div>
             {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={listedVideos}/>}
+            {listedVideos.length <= 0 ? null : <button className={'new-videos-btn'} onClick={(e) => fetchNextVideos(e)}>Load more</button>}
         </div>
     )
 };
