@@ -6,7 +6,10 @@ I've started making copy of YT search panel, here, with YT's API I'll create a l
 ![image](https://user-images.githubusercontent.com/59931735/170273067-f9ae3223-740c-409e-ba0c-1e7b446f6cd7.png)
 
 # Desktop. Main page:
-![image](https://user-images.githubusercontent.com/59931735/170273363-4cf026dc-0bff-4f95-86d9-6e6b3c821c95.png)
+![image](https://user-images.githubusercontent.com/59931735/170886486-0316b5f1-c459-4fec-8c67-aafb761dcd56.png)
+
+# Desktop. Favorites page:
+![image](https://user-images.githubusercontent.com/59931735/170886520-ab5a0e34-0cff-4495-a87f-9709a27b9155.png)
 
 # Desktop. Search results:
 ![image](https://user-images.githubusercontent.com/59931735/170273442-e7f8fbac-3fc4-4ae9-b15d-68a8e67e9935.png)
