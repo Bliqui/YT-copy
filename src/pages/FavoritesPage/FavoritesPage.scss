@@ -1,2 +1,28 @@
 @import "./src/assests/styles/index";
 
+.favoritesBody {
+  font-family: $fontFamily;
+  width: 100%;
+  height: 92%;
+  & .favoritesWrapper {
+    height: 100%;
+  }
+
+  & .favoritesEmptyWrapper {
+    height: 100%;
+    @include flex(center, row, center);
+    & .favoritesEmptyContent {
+      @include flex(center, column, center);
+      & .emptyTitle {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      & .emptyAdvice {
+        font-size: 20px;
+        color: #636363;
+        text-decoration: underline;
+      }
+    }
+  }
+}
