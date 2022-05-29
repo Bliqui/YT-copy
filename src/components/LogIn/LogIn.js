@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {app} from "../../firebase";
 import {useNavigate} from "react-router-dom";
+import {error, ok} from "../../helpers/customAlert";
 
 export const LogIn = () => {
     const dispatch = useDispatch();
@@ -23,8 +24,9 @@ export const LogIn = () => {
                     }
                 });
                 navigate('/');
+                ok('Welcome!')
             })
-            .catch(console.error)
+            .catch(() => error('Wrong email or password.'))
     }
 
     return (

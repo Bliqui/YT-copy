@@ -6,6 +6,8 @@ import {Loader} from "../Loader/Loader";
 import {useNavigate} from "react-router-dom";
 import {VideosList} from "../VideosList/VideosList";
 import {useAuth} from "../../hooks/useAuth";
+import {ToastContainer} from "react-toastify";
+import {alert} from "../../helpers/customAlert";
 
 export const Videos = () => {
     const [listedVideos, setListedVideos] = useState([]);
@@ -27,7 +29,7 @@ export const Videos = () => {
                 setListedVideos(prevState => [...prevState, response.data])
             })
             .catch(() => {
-                alert('Oops... something could have gone wrong.');
+                alert();
                 navigate('/');
             })
             .finally(() => setLoader(false));

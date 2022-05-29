@@ -11,6 +11,7 @@ import {Provider} from "react-redux";
 import {store} from "./redux/store";
 import "./firebase";
 import {FavoritesPage} from "./pages/FavoritesPage/FavoritesPage";
+import {ToastContainer} from "react-toastify";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
                     <Route path={'/favorites'} element={<FavoritesPage/>}/>
                 </Route>
             </Routes>
+            <ToastContainer position="top-center" />
         </Provider>
     </BrowserRouter>
 );

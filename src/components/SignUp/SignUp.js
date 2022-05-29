@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 import {app} from "../../firebase";
 import {useNavigate} from "react-router-dom";
+import {error, ok} from "../../helpers/customAlert";
 
 export const SignUp = () => {
 
@@ -23,8 +24,9 @@ export const SignUp = () => {
                     }
                 });
                 navigate('/');
+                ok('Welcome!')
             })
-            .catch(console.error)
+            .catch(() => error('Error. Please check that your email address is correct or the password is at least 6 characters long.'))
     }
     return (
         <LogForm
