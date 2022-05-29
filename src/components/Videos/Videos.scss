@@ -49,4 +49,9 @@
   & .videosList {
     max-width: 1200px;
   }
+
+  & .new-videos-btn {
+    @include button;
+    height: 45px;
+  }
 }
