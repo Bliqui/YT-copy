@@ -6,7 +6,7 @@ export const ytReq = axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3/',
     params:{
         part: 'snippet',
-        maxResults: '12',
+        maxResults: '24',
         key: KEY
     }
 });
