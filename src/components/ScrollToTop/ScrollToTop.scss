@@ -1,0 +1,10 @@
+@import "./src/assests/styles/index";
+
+.back-to-top-img {
+  max-width: 45px;
+  max-height: 45px;
+  position: fixed;
+  bottom: 50px;
+  right: 10%;
+  cursor: pointer;
+}
