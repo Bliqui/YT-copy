@@ -53,5 +53,6 @@
   & .new-videos-btn {
     @include button;
     height: 45px;
+    margin-bottom: 20px;
   }
 }

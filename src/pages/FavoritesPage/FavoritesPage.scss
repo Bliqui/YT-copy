@@ -10,6 +10,7 @@
 
   & .favoritesEmptyWrapper {
     height: 100%;
+    text-align: center;
     @include flex(center, row, center);
     & .favoritesEmptyContent {
       @include flex(center, column, center);
