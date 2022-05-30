@@ -3,13 +3,13 @@ import {Video} from "../Video/Video";
 import './VideosList.scss';
 
 export const VideosList = ({listedVideos}) => {
-    const videosList = listedVideos[0]
+    console.log(listedVideos)
 
-    if (listedVideos.length > 0) {
+    if (listedVideos) {
         return (
         <div className={'videosBody'}>
             <div className={'videosWrapper'}>
-                {videosList.items.map((video) => <Video key={video.etag} videoData={video}/>)}
+                {listedVideos.items.map((video) => <Video key={video.etag} videoData={video}/>)}
             </div>
         </div>
     );}

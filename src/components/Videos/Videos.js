@@ -6,14 +6,17 @@ import {Loader} from "../Loader/Loader";
 import {useNavigate} from "react-router-dom";
 import {VideosList} from "../VideosList/VideosList";
 import {useAuth} from "../../hooks/useAuth";
-import {ToastContainer} from "react-toastify";
+import {useDispatch, useSelector} from "react-redux";
 import {alert} from "../../helpers/customAlert";
+import {ScrollToTop} from "../ScrollToTop/ScrollToTop";
 
 export const Videos = () => {
-    const [listedVideos, setListedVideos] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [loader, setLoader] = useState(false);
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+    const videos = useSelector(state => state.videosListReducer)
 
     function fetchVideos(e) {
         e.preventDefault()
@@ -25,18 +28,23 @@ export const Videos = () => {
             }
         })
             .then((response) => {
-                setListedVideos([]);
-                setListedVideos(prevState => [...prevState, response.data])
+                dispatch({
+                    type: 'SET_VIDEOS',
+                    payload: {
+                        etag: response.data.etag,
+                        items: response.data.items,
+                        kind: response.data.kind,
+                        nextPageToken: response.data.nextPageToken,
+                        pageInfo: response.data.pageInfo,
+                        regionCode: response.data.regionCode,
+                    }
+                })
             })
             .catch(() => {
                 alert();
                 navigate('/');
             })
             .finally(() => setLoader(false));
-    };
-
-    function handeInputChange(e) {
-        setSearchValue(e.target.value)
     };
 
     function fetchNextVideos(e) {
@@ -46,12 +54,21 @@ export const Videos = () => {
         ytReq.get('/search', {
             params: {
                 q: searchValue,
-                pageToken: listedVideos[0].nextPageToken
+                pageToken: videos.nextPageToken
             }
         })
             .then((response) => {
-                setListedVideos([]);
-                setListedVideos(prevState => [...prevState, response.data])
+                dispatch({
+                    type: 'SET_VIDEOS',
+                    payload: {
+                        etag: response.data.etag,
+                        items: response.data.items,
+                        kind: response.data.kind,
+                        nextPageToken: response.data.nextPageToken,
+                        pageInfo: response.data.pageInfo,
+                        regionCode: response.data.regionCode,
+                    }
+                })
             })
             .catch(() => {
                 alert('Oops... something could have gone wrong.');
@@ -60,7 +77,11 @@ export const Videos = () => {
             .finally(() => {
                 setLoader(false)
             });
-    }
+    };
+
+    function handeInputChange(e) {
+        setSearchValue(e.target.value)
+    };
 
     const {isAuth} = useAuth();
 
@@ -68,7 +89,7 @@ export const Videos = () => {
         if (isAuth === false) {
             navigate('/login')
         }
-    }, [isAuth])
+    }, [isAuth]);
 
     return (
         <div className={'videos-search-body'}>
@@ -79,8 +100,9 @@ export const Videos = () => {
                     <button className={'input-search-btn'}><img src={search} alt="search"/></button>
                 </form>
             </div>
-            {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={listedVideos}/>}
-            {listedVideos.length <= 0 ? null : <button className={'new-videos-btn'} onClick={(e) => fetchNextVideos(e)}>Load more</button>}
+            {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={videos}/>}
+            {videos.items.length <= 0 ? null : <button className={'new-videos-btn'} onClick={(e) => fetchNextVideos(e)}>Load more</button>}
+            <ScrollToTop/>
         </div>
     )
 };
