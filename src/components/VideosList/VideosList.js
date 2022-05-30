@@ -3,8 +3,6 @@ import {Video} from "../Video/Video";
 import './VideosList.scss';
 
 export const VideosList = ({listedVideos}) => {
-    console.log(listedVideos)
-
     if (listedVideos) {
         return (
         <div className={'videosBody'}>
