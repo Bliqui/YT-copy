@@ -1,5 +1,7 @@
 # YouTube search panel copy
-I've started making copy of YT search panel, here, with YT's API I'll create a little application which will allow you to find any public video from YouTube.
+Finally, my tangent goal for this project is nearing completion. It remains to finalize 1 function (adding videos to favorites).
+
+You can try my project in action at this [link](https://yt-copy.herokuapp.com/login) :)
 
 # Desktop. Login/Register pages:
 ![image](https://user-images.githubusercontent.com/59931735/170273026-3fa03c54-e929-4a4c-9c32-7e3065739395.png)
