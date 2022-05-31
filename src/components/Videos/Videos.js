@@ -18,9 +18,14 @@ export const Videos = () => {
     const dispatch = useDispatch();
     const videos = useSelector(state => state.videosListReducer)
 
+    const disableBtn = () => dispatch({type: 'DISABLE_BTN'})
+    const enableBtn = () => dispatch({type: 'ENABLE_BTN'})
+
+
     function fetchVideos(e) {
         e.preventDefault()
         setLoader(true)
+        disableBtn()
 
         ytReq.get('/search', {
             params: {
@@ -39,6 +44,7 @@ export const Videos = () => {
                         regionCode: response.data.regionCode,
                     }
                 })
+                enableBtn()
             })
             .catch(() => {
                 alert();
@@ -50,6 +56,7 @@ export const Videos = () => {
     function fetchNextVideos(e) {
         setLoader(true)
         e.preventDefault()
+        disableBtn()
 
         ytReq.get('/search', {
             params: {
@@ -69,6 +76,7 @@ export const Videos = () => {
                         regionCode: response.data.regionCode,
                     }
                 })
+                enableBtn()
             })
             .catch(() => {
                 alert('Oops... something could have gone wrong.');
@@ -101,7 +109,7 @@ export const Videos = () => {
                 </form>
             </div>
             {loader ? <Loader/> : <VideosList className={'videosList'} listedVideos={videos}/>}
-            {videos.items.length <= 0 ? null : <button className={'new-videos-btn'} onClick={(e) => fetchNextVideos(e)}>Load more</button>}
+            {videos.btnStatus === false ? null : <button className={'new-videos-btn'} onClick={(e) => fetchNextVideos(e)}>Load more</button>}
             <ScrollToTop/>
         </div>
     )

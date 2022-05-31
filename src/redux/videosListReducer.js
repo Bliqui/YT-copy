@@ -4,7 +4,8 @@ const initialState = {
     kind: null,
     nextPageToken: null,
     pageInfo: null,
-    regionCode: null
+    regionCode: null,
+    btnStatus: false,
 }
 
 export const videosListReducer = (state = initialState, action) => {
@@ -18,6 +19,16 @@ export const videosListReducer = (state = initialState, action) => {
                 nextPageToken: action.payload.nextPageToken,
                 pageInfo: action.payload.pageInfo,
                 regionCode: action.payload.regionCode,
+            }
+        case 'DISABLE_BTN':
+            return {
+                ...state,
+                btnStatus: false,
+            }
+        case 'ENABLE_BTN':
+            return {
+                ...state,
+                btnStatus: true,
             }
         default:
             return state
