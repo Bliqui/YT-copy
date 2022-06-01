@@ -2,6 +2,9 @@
 Finally, my goal for this project is nearing completion. It remains to finalize 1 function (adding videos to favorites).
 
 You can try my project in action at this [link](https://yt-copy.herokuapp.com/login) :)
+(If you don't want to register, you may use already existing account:
+login: abc@mail.ru
+password: 123321
 
 # Desktop. Login/Register pages:
 ![image](https://user-images.githubusercontent.com/59931735/170273026-3fa03c54-e929-4a4c-9c32-7e3065739395.png)
