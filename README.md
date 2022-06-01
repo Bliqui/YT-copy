@@ -1,5 +1,5 @@
 # YouTube search panel copy
-Finally, my tangent goal for this project is nearing completion. It remains to finalize 1 function (adding videos to favorites).
+Finally, my goal for this project is nearing completion. It remains to finalize 1 function (adding videos to favorites).
 
 You can try my project in action at this [link](https://yt-copy.herokuapp.com/login) :)
 
