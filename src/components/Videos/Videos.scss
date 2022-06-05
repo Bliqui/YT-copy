@@ -21,6 +21,7 @@
       & .input-search-btn {
         height: 36px;
         width: 36px;
+        @include flex(center, row, center)
       }
 
       & .search-input {

@@ -13,10 +13,16 @@
     height: 100%;
     max-width: 1200px;
 
+    @media screen and (max-width: 480px){
+      width: 100%;
+    }
     & .navBar-row {
       @include flex(space-between, row, center);
       height: 100%;
 
+      @media screen and (max-width: 480px){
+        @include flex(space-around, row, center);
+      }
       & .navBar-logoWrapper {
         text-align: center;
         cursor: pointer;
