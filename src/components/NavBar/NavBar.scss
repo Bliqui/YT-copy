@@ -21,7 +21,9 @@
       height: 100%;
 
       @media screen and (max-width: 480px){
-        @include flex(space-around, row, center);
+        @include flex(flex-start, row, center);
+        width: 80%;
+        margin-inline: auto;
       }
       & .navBar-logoWrapper {
         text-align: center;
