@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {LogForm} from "../LogForm/LogForm";
 import {useDispatch} from "react-redux";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {app} from "../../firebase";
 import {useNavigate} from "react-router-dom";
 import {error, ok} from "../../helpers/customAlert";
+import { useAuth } from '../../hooks/useAuth';
 
 export const LogIn = () => {
     const dispatch = useDispatch();
@@ -28,6 +29,14 @@ export const LogIn = () => {
             })
             .catch(() => error('Wrong email or password.'))
     }
+
+    const {isAuth} = useAuth();
+
+    useEffect(() => {
+        if (isAuth === true) {
+            navigate('/')
+        }
+    }, [isAuth]);
 
     return (
         <LogForm

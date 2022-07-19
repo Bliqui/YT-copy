@@ -5,6 +5,7 @@ import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 import {app} from "../../firebase";
 import {useNavigate} from "react-router-dom";
 import {error, ok} from "../../helpers/customAlert";
+import { useAuth } from '../../hooks/useAuth';
 
 export const SignUp = () => {
 
@@ -28,6 +29,15 @@ export const SignUp = () => {
             })
             .catch(() => error('Error. Please check that your email address is correct or the password is at least 6 characters long.'))
     }
+
+    const {isAuth} = useAuth();
+
+    useEffect(() => {
+        if (isAuth === true) {
+            navigate('/')
+        }
+    }, [isAuth]);
+
     return (
         <LogForm
             className={'form'}
